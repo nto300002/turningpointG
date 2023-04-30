@@ -1,0 +1,33 @@
+.title {
+  margin-top: 10em;
+}
+
+.title h1 {
+  font-size: 55px;
+  width: 50%;
+}
+
+.midashi {
+  width: 15%;
+  margin: auto;
+}
+
+.text1 {
+  border-radius: 10px 150px/20px 10px;
+  border-bottom: solid 5px rgb(0, 179, 0);
+  width: 250px;
+}
+
+.text2 {
+  margin-left: 500px;
+  width: 270px;
+  border-radius: 5px 30px/20px 10px;
+  border-bottom: solid 5px rgb(0, 182, 0);
+}
+
+.text3 {
+  margin-top: 300px;
+  border-radius: 10px 50px/110px 10px;
+  border-bottom: solid 5px rgb(23, 198, 23);
+  width: 270px;
+}
