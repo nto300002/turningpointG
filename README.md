@@ -1,24 +1,11 @@
-# README
+### 要件定義
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://www.notion.so/bdefce29c03f4f4a9f5da8b17949b5dd?v=3dab767a762d457489409cbd6622c83d&p=b8771c4e030649f19748a8b1eb14315a&pm=s
 
-Things you may want to cover:
+### 画面設計図
 
-* Ruby version
+https://www.figma.com/file/JfyGOt4RHaIYomf17mnnnO/%E5%8E%9F%E4%BD%93%E9%A8%93?node-id=0-1&t=S2Hx2WOxNJ2FYZQ9-0
 
-* System dependencies
+### ER 図
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://zenn.dev/yasuda/scraps/5b37805315215d
