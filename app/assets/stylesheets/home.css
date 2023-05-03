@@ -12,6 +12,13 @@
   margin: auto;
 }
 
+.home-session_link {
+  width: 15%;
+  margin: auto;
+  margin-top: 1em;
+  font-size: 24px;
+}
+
 .text1 {
   border-radius: 10px 150px/20px 10px;
   border-bottom: solid 5px rgb(0, 179, 0);

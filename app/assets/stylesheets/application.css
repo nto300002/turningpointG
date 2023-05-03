@@ -14,12 +14,9 @@
  *= require_self
  */
 
-body {
+main {
   margin: auto;
   width: 900px;
-}
-
-main {
 }
 
 h1 {
@@ -35,4 +32,73 @@ h1 {
   border: 5px solid rgb(0, 215, 0);
   border-radius: 40% 60% 40% 50% / 60% 60% 50% 60%;
   padding: 0.3em;
+}
+
+li {
+  list-style: none;
+}
+
+/* ヘッダーメニュー */
+/* 基本装飾 */
+header {
+  padding: 0.5rem;
+  text-align: right;
+}
+a {
+  color: rgb(0, 114, 71);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sidemenu {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0.5em 1em;
+  background: rgb(114, 255, 114);
+  border-radius: 10px 50px/50px 10px;
+  /* border: solid 2px rgb(21, 155, 0); */
+}
+
+/* ボタン */
+.btn-menu {
+  border: 3px solid rgb(12, 12, 12);
+  border-radius: 10px 50px/20px 10px;
+  background: transparent;
+  color: rgb(46, 46, 46);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* メニュー */
+nav {
+  position: absolute;
+  z-index: 1;
+  top: 3.125rem;
+  right: 0;
+  overflow-x: hidden;
+  text-align: center;
+  width: 0;
+  transition: 0.5s;
+  width: 16%;
+}
+
+/* submit */
+/* フォーム */
+
+.form-field {
+  margin-left: 23%;
+}
+
+.input-text {
+  border-radius: 10px 50px/20px 10px;
+  text-align: center;
+  width: 400px;
+  height: 30px;
+}
+
+.submit-button {
+  border-radius: 10px 50px/20px 10px;
+  text-align: center;
+  padding: 0.9em;
 }

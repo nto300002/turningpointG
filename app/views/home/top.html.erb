@@ -3,5 +3,11 @@
   <div class="title">
       <p class="midashi"><span>\そんなあなたに/</span></p>
       <h1><span class="emphasis">原体験</span>Dig Up!!</h1>
+      <% if logged_in? %>
+        <p class="home-session_link"><%= link_to "Log out", logout_path, class: "ui inverted button", data: { turbo_method: :delete, turbo_confirm: " 本当にログアウトしますか？"} %></p>
+      <% else %>
+        <p class="home-session_link"><%= link_to "Log in", login_path, class: "ui inverted button" %></p>
+        <p class="home-session_link"><%= link_to "Sign up", signup_path, class: "ui inverted button" %></p>
+      <% end %>
   </div>
   <p class="text3"><span>なにをするにもやる気が出ない・・</span></p>

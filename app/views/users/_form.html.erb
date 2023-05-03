@@ -1,0 +1,39 @@
+<%= form_with(model: user, local: true, class: "ui form  segment", id: "signup-form") do |form| %>
+
+<ul class="form-field">
+  <li class="field <%= user.errors.include?(:name) ? 'error' : '' %>">
+    <p><%= form.label :name %></p>
+    <p><%= form.text_field :name, placeholder: "ユーザー名", class: "input-text" %></p>
+    <p></p>
+  </li>
+  <li class="field <%= user.errors.include?(:name) ? 'error' : '' %>">
+    <p><%= form.label :email %></p>
+    <p><%= form.email_field :email, placeholder: "メールアドレス", class: "input-text" %></p>
+    <p></p>
+  </li>
+  <li class="field <%= user.errors.include?(:name) ? 'error' : '' %>">
+    <p><%= form.label "パスワード(6文字以上で入力してください)" %></p>
+    <p><%= form.password_field :password, placeholder: "パスワード", class: "input-text" %></p>
+    <p></p>
+  </li>
+  <li class="field <%= user.errors.include?(:name) ? 'error' : '' %>">
+    <p><%= form.label :password_confirmation %></p>
+    <p><%= form.password_field :password_confirmation, placeholder: "パスワード(確認用)", class: "input-text" %></p>
+    <p></p>
+  </li>
+  <li class="field <%= user.errors.include?(:name) ? 'error' : '' %>">
+    <p><%= form.submit class: "submit-button" %></p>
+    <p><%= link_to "キャンセル", !user.new_record? ? user_path : root_path,  class: "ui button" %></p>
+    <p></p>
+  </li>
+</ul>
+
+  <%# if user.errors.any? %>
+<!--    <div class="ui error message"> -->
+      <%# user.errors.each do |error| %>
+<!--        <li><%#= error.full_message %></li> -->
+      <%# end %>
+<!--     </div>  -->
+  <%# end %>
+<%# <%= render 'shared/error_messages', obj: user, key: :name %>
+<% end %>
