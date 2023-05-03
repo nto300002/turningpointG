@@ -1,0 +1,16 @@
+<!-- Sidebar Menu -->
+<header>
+<button class="btn-menu">メニュー</button>
+    <nav>
+    <ul>
+      <li class="sidemenu"><a><%= link_to "ホーム", root_path, class: "active item" %></a></li>
+      <% if logged_in? %>
+        <li class="sidemenu"><a><%= link_to "Log out", logout_path, class: "ui inverted button", data: { turbo_method: :delete, turbo_confirm: " 本当にログアウトしますか？"} %></a></li>
+      <% else %>
+        <li class="sidemenu"><a><%= link_to "Log in", login_path, class: "ui inverted button" %></a></li>
+        <li class="sidemenu"><a><%= link_to "Sign up", signup_path, class: "ui inverted button" %></a></li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+</header>

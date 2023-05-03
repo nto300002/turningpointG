@@ -1,0 +1,31 @@
+<h1>ログイン</h1>
+
+<%= form_with(scope: :session, url: login_path, local: true, class: "ui form segment", id: "login_form") do |form| %>
+
+  <div class="field <%#= user.errors.include?(:email) ? 'error' : '' %>">
+  <ul class="form-field">
+    <li>
+      <p><%= form.label "メールアドレス" %></p>
+      <p><%= form.email_field :email, placeholder: "メールアドレス", class: "input-text" %></p>
+      <%#= render 'shared/error_messages', obj: user, key: :email %>
+    </li>
+    <li>
+      <p><%= form.label "パスワード" %></p>
+      <p><%= form.password_field :password, placeholder: "パスワード", class: "input-text" %></p>
+    <%# <%= link_to ">>パスワードをお忘れですか？", new_password_reset_path %>
+    <%#= render 'shared/error_messages', obj: user, key: :password %>
+    </li>
+    <li>
+      <p><%= form.check_box :remember_me %><%= form.label "ログイン状態を保持する" %></p>
+    </li>
+    <li>
+      <p><%= form.submit "ログイン", class: "submit-button" %></p>
+    </li>
+  </ul>
+  </div>
+<% end %>
+    <div class="ui message">
+      アカウントをお持ちでないですか？ <%= link_to "アカウント新規作成", signup_path %>
+    </div>
+  </div>
+</div>
