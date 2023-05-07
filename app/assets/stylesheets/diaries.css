@@ -1,0 +1,21 @@
+.detail {
+  border-radius: 10px 50px/20px 10px;
+  border: solid 2px rgb(198, 198, 198);
+  padding: 0 2em 2em 2em;
+}
+
+table {
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+tbody {
+  border: 1px dashed grey;
+}
+
+td {
+  padding: 1em;
+  border: 1px dashed grey;
+  border-radius: 10px 50px/20px 10px;
+}

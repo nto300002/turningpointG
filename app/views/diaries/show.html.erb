@@ -1,0 +1,17 @@
+<h2>Title</h2>
+
+  <div class="detail">
+    <p><%= @diary.title %></p>
+  </div>
+  <h2>detail</h2>
+  <div class="detail">
+    <p><%= @diary.detail %></p>
+  </div>
+  <h2>emotion</h2>
+  <div class="detail">
+    <p><%= @diary.emotion %></p>
+  </div>
+  <h2>evaluation</h2>
+  <input type="range" name="quantity" min="0" max="100" value="<%= @diary.evaluation %>">
+    <p><%= @diary.evaluation %>points</p>
+<%= link_to '戻る', diaries_path, class: "bottom-link"  %>
