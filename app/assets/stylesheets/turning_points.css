@@ -1,0 +1,11 @@
+.turning_points-form {
+  border-radius: 10px 50px/20px 10px;
+  text-align: center;
+  width: 400px;
+  height: 30px;
+}
+
+.turning_point-nav {
+  border: none;
+  text-align: center;
+}

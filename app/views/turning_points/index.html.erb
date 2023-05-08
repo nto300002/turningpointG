@@ -1,0 +1,54 @@
+<h1>ターニング・ポイント</h1>
+<h2>form</h2>
+<div class="form-field">
+  <%= form_with(model: @new_turning_point, url: turning_points_path, local: true) do |form| %>
+    <p><%= form.text_field :current_task, placeholder: '今やっていること', class: "turning_points-form" %></p>
+    <p><%= form.text_field :enthusiastic, placeholder: '時間を忘れてできること', class: "turning_points-form" %></p>
+    <p><%= form.text_field :favorite_word, placeholder: '好きな言葉', class: "turning_points-form" %></p>
+    <p><%= form.text_field :unpleasant_thing, placeholder: 'やりたくないこと', class: "turning_points-form" %></p>
+    <p><%= form.text_field :what_i_want_to_do_in_the_future, placeholder: '将来やりたいこと', class: "turning_points-form" %></p>
+    <p><%= form.submit '追加' %>
+  <% end %>
+</div>
+
+<h2>あなたの原体験</h2>
+<table>
+  <thead>
+    <tr>
+      <th>今やっていること</th>
+      <th>時間を忘れてできること</th>
+      <th>好きな言葉</th>
+      <th>やりたくないこと</th>
+      <th>将来やりたいこと</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @turning_points.each do |turningpoint| %>
+      <tr>
+        <td><%= turningpoint.current_task %></td>
+        <td><%= turningpoint.enthusiastic %></td>
+        <td><%= turningpoint.favorite_word %></td>
+        <td><%= turningpoint.unpleasant_thing %></td>
+        <td><%= turningpoint.what_i_want_to_do_in_the_future %></td>
+        <td><%= link_to "編集", edit_turning_point_path(turningpoint), class: "edit-link" %></td>
+        <td><%= button_to "削除", turningpoint, method: :delete, data: { confirm: "本当に削除しますか?" }, class: "delete-button" %></td>
+      </tr>
+      <tr>
+        <td class="turning_point-nav">▼</td>
+        <td class="turning_point-nav">▼</td>
+        <td class="turning_point-nav">▼</td>
+        <td class="turning_point-nav">▼</td>
+        <td class="turning_point-nav">▼</td>
+      </tr>
+    <% end %>
+    <tr>
+      <td class="turning_point-nav">TIPS</td>
+      <td class="turning_point-nav">質問を続けよう→</td>
+      <td class="turning_point-nav">何故そうしたかった？</td>
+      <td class="turning_point-nav">解像度を上げよう→</td>
+      <td class="turning_point-nav">最後にそれを行ったのは？誰と？それを知らない人に説明するとどうなる？</td>
+      <td class="turning_point-nav">最低5回質問しよう</td>
+    </tr>
+  </tbody>
+</table>
+

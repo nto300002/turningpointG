@@ -1,0 +1,18 @@
+<h1>日記編集</h1>
+<div class="form-field">
+<%= form_with(model: @turning_point, url: turning_points_path, local: true) do |f| %>
+  <h2>今やっていること</h2>
+  <div><%= f.text_field :current_task, class: "input-text" %></div>
+  <h2>時間を忘れてできること</h2>
+  <div><%= f.text_field :enthusiastic, class: "input-text" %></div>
+  <h2>好きな言葉</h2>
+  <div><%= f.text_field :favorite_word, class: "input-text" %></div>
+  <h2>やりたくないこと</h2>
+  <div><%= f.text_field :unpleasant_thing, class: "input-text" %></div>
+  <h2>将来やりたいこと</h2>
+  <div><%= f.text_field :what_i_want_to_do_in_the_future, class: "input-text" %></div>
+  <div><%= f.submit "編集", class: "submit-button"%></div>
+<% end %>
+</div>
+<%= link_to '戻る', turning_points_path, class: "bottom-link" %>
+
