@@ -26,6 +26,18 @@ h1 {
   border-bottom: solid 5px rgb(0, 215, 0);
   text-align: center;
   margin: auto;
+  box-shadow: 0 10px 10px rgba(58, 255, 64, 0.2);
+}
+
+h2 {
+  font-size: 20px;
+  border-radius: 10px 50px/20px 10px;
+  border-bottom: solid 1px rgb(170, 255, 170);
+  width: 200px;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 4px rgba(58, 255, 64, 0.2);
 }
 
 .emphasis {
@@ -36,6 +48,17 @@ h1 {
 
 li {
   list-style: none;
+}
+
+.bottom-link {
+  background-color: rgb(0, 215, 0);
+  color: #fff;
+  padding: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 5px;
+  width: 20%;
+  margin-left: 450px;
 }
 
 /* ヘッダーメニュー */
@@ -86,8 +109,14 @@ nav {
 /* submit */
 /* フォーム */
 
+.form-style {
+  width: 35%;
+  margin: auto;
+}
+
 .form-field {
-  margin-left: 23%;
+  /* margin-left: 23%; */
+  margin: auto;
 }
 
 .input-text {
@@ -101,4 +130,19 @@ nav {
   border-radius: 10px 50px/20px 10px;
   text-align: center;
   padding: 0.9em;
+}
+
+.delete-button {
+  color: #fff;
+  background-color: tomato;
+  border-radius: 4px;
+  border: none;
+}
+
+.edit-link {
+  color: #fff;
+  background-color: rgb(51, 191, 72);
+  border-radius: 4px;
+  border: none;
+  padding: 3.5px;
 }

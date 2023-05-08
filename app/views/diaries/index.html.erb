@@ -1,0 +1,19 @@
+
+<h1>日記一覧</h1>
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @diaries.each do |diary| %>
+      <tr>
+        <td><%= link_to diary.title, diary_path(diary) %></td>
+        <td><%= link_to "編集", edit_diary_path(diary), class: "edit-link" %></td>
+        <td><%= button_to "削除", diary, method: :delete, data: { confirm: "本当に削除しますか?" }, class: "delete-button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to '追加', new_diary_path, class: "bottom-link"  %>
